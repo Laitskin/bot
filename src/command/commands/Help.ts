@@ -5,4 +5,8 @@ export class Help extends Command {
         super()
         console.log('Im helping!')
     }
+
+    run() {
+        //
+    }
 }
