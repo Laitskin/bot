@@ -8,7 +8,10 @@
   },
   "main": "dist/app.js",
   "scripts": {
-    "start": "tsc && node dist/app.js",
+    "run-once": "npx tsc && npm run stop",
+    "stop": "node dist/main.js",
+    "start": "npx tsc && node dist/main.js",
+    "watch": "npx tsc -w",
     "lint": "eslint .",
     "test": "npm run lint"
   },
