@@ -4,7 +4,7 @@ import {CommandFactory} from "../command/CommandFactory";
 import {APIMessage} from "discord-api-types/v8/payloads/channel";
 
 export class DiscordMessageHandler {
-    public handle(message: APIMessage) {
+    public handle(message: APIMessage): Promise<any> {
         const command: Command = this.getCommandInstance(message);
         this.validateMessage(message, command);
 
@@ -20,7 +20,7 @@ export class DiscordMessageHandler {
     }
 
     private validateMessage(message: APIMessage, command: Command) {
-        // Is blacklisted?
+        command.validate(message.author);
         // Is bot?
         // Command allows author?
         // Command is locked?
