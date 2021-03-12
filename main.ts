@@ -1,4 +1,3 @@
-import {DiscordMessageHandler} from "./src/discord/DiscordMessageHandler";
 import {SessionService} from "./src/session/SessionService";
 import {DatabaseService} from "./src/database/DatabaseService";
 import express from 'express';
@@ -24,6 +23,8 @@ function init() {
     });
 
     discordService.init();
+
+    discordService.mockCommand('-help');
 }
 
 init();
