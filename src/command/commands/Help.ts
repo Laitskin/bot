@@ -1,12 +1,17 @@
-import {Command} from "../Command";
+import { Command } from "../Command";
+import { APIUser } from "discord-api-types";
 
 export class Help extends Command {
     constructor() {
-        super()
-        console.log('Im helping!')
-    }
+    super();
+    console.log("Im helping!");
+  }
 
-    run() {
-        //
-    }
+  async run() {
+    //
+  }
+
+  validate(messageAuthor: APIUser) {
+    return;
+  }
 }

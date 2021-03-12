@@ -1,7 +1,10 @@
-export abstract class Command {
-    public constructor() {
-        console.log('Command started');
-    };
+import { APIUser } from "discord-api-types";
 
-    public abstract run();
+export abstract class Command {
+  public constructor() {
+    console.log("Command started");
+  }
+
+  public abstract run(): Promise<any>;
+  public abstract validate(messageAuthor: APIUser);
 }
