@@ -18,7 +18,7 @@ function prettify(dataset: ListableEntity[]): string {
           list += '|\n';
       }
   
-      result += '\n' + repeatChar('-', header.length+1) + '\n';
+      result += repeatChar('-', header.length+1) + '\n';
       result += header + '|';
       result += '\n' + repeatChar('-', header.length+1) + '\n';
       result += list;
