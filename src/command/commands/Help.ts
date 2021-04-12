@@ -2,8 +2,8 @@ import { Command } from "../Command";
 import { APIUser } from "discord-api-types";
 
 export class Help extends Command {
-    constructor() {
-    super();
+  constructor(props) {
+    super(props);
     console.log("Im helping!");
   }
 
